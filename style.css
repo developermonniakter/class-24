@@ -49,7 +49,7 @@ body,h1,h2,h3,h4,h5,h6,span,a{
     position: absolute;
     left: 8px;
     height: 4px;
-    top: 58px;
+    top: 56px;
     width: 0;
     background: #fff;
     transition: .5s;
@@ -87,7 +87,7 @@ body,h1,h2,h3,h4,h5,h6,span,a{
 .banner-btn{
      padding: 10px 20px;
      font-size: 15px;
-     color: #fff;
+     color: #ddd;
      border-radius: 25px;
      position: relative;
       z-index: 1;
@@ -107,7 +107,6 @@ body,h1,h2,h3,h4,h5,h6,span,a{
     font-size: 40px; 
     margin-top: 60px;
     margin-bottom: 25px;
-
 }
 .banner-text p{
     margin-bottom: 35px;
@@ -118,12 +117,13 @@ body,h1,h2,h3,h4,h5,h6,span,a{
 }
 .banner-btn:hover::after{
     width: 100%;
-     background: #fff;
+    background: #fff;
+    color: black !important;
 }
 .banner-image{
     position: relative;
     top: -90px;
-    right: -36px;
+    right: -158px;
     width: 550px;
     height: 550px;
     border-radius: 50%;
@@ -168,10 +168,183 @@ body,h1,h2,h3,h4,h5,h6,span,a{
 }
     /* about-section */
 .about-section{
-    width: 100%;
-     height: 100% !important;
+    /* width: 100%; */
+     height: 90vh;
     background: url(./img/video-bg.jpg) no-repeat;
     background-position: top center;
     background-size: cover;
-    
+    position: relative;
+    z-index: 1;
+}
+.about-section::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(58, 45, 122, 0.705);
+    z-index: -1;
+}
+.animation{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.play-btn{
+    font-size: 40px;
+    background-color: #fff;
+    text-decoration: none;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+.play-btn::before{
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    animation: play 2s ease-in-out infinite;
+}
+.play-btn::after{
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    animation: play 2s ease-in-out infinite;
+}
+@keyframes play{
+    from{
+        transform: scale(1);
+        opacity: 1;
+    }
+    to{
+        transform: scale(2.2);
+        opacity: 0;
+    }
+
+}
+    /* pricing-section */
+
+.finix-text h5{
+    color: blueviolet;
+    margin-bottom: 12px;
+}
+.finix-text h2{
+    font-weight: 500;
+    font-size: 40px;
+    margin-bottom: 15px;
+    position: relative;
+}
+.finix-text h2::after {
+    content: "";
+    position: absolute;
+    left: 519px;
+    height: 2px;
+    top: 50px;
+    width: 40px;
+    background: blueviolet;
+}
+.finix-text p{
+    color: #666;
+}
+.pricing-card h5{
+    padding: 15px 0;
+   
+}
+.pricing-card h2{
+    font-size: 50px;
+    font-weight: 600;
+    padding-top: 10px;
+    padding-bottom: 30px;   
+
+}
+.pricing-card{
+    transition: all 0.5s;
+}
+.pricing-card:hover{
+    background: rgba(34, 34, 241, 0.829);
+    color: #fff;
+}
+.card-botton{
+    border: none;
+}
+    /* slider-section */
+.slider-section{
+    background: url(./img/free-bg.jpg) no-repeat center;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+    z-index: 1;
+}
+.slider-section::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 10, 189, 0.658);
+    z-index: -1;
+}
+.slider-text{
+    margin-top: 105px;
+}
+.slider-text h5{   
+    margin-bottom: 12px;
+}
+.slider-text h2{
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 15px;
+    position: relative;
+}
+.slider-text h2::after {
+    content: "";
+    position: absolute;
+    left: 250px;
+    height: 2px;
+    top: 75px;
+    width: 40px;
+    background:#fff ;
+}
+.slider-text p{
+    color: #666;
+}
+.button{
+    padding: 10px 20px;
+    font-size: 15px;
+    border-radius: 25px;
+    position: relative;
+    border: none;
+}
+.button::after{
+    content: "";
+    position: absolute;
+    color: white;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    border-radius: 25px;
+    transition: .4s;
+}
+.button:hover::after{
+    background: rgb(106, 27, 180);
+    color: #fff !important;
+    width: 100%;
+}
+    /* news-letter-section */
+.news-card p{
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 45px;
 }
